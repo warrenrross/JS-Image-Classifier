@@ -1,20 +1,134 @@
-<html>
-  <head>
-    <!-- Load the latest version of TensorFlow.js -->
-    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
-    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
-    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
-  </head>
-  <body>
-    <div id="console"></div>
-    <!-- Add an image that we will use to test -->
-    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
-    
-    <button id="class-a">Add A</button>
-    <button id="class-b">Add B</button>
-    <button id="class-c">Add C</button>
-    <button id="class-no_action">Add No Action</button>
-    <!-- Load index.js after the content of the page -->
-    <script src="index.js"></script>
-  </body>
+<!DOCTYPE HTML>
+<!--
+	Template for the website supplied by:
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Remix</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://unpkg.com/@tensorflow/tfjs"></script>
+		<script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+		<script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="image main" data-position="center">
+									<!-- <header class="major">
+										<h2>Evolving with Data!</h2>
+
+										<h3>Welcome to my GitHub Pages!</h3>
+									</header> -->
+									<img src="images/sn-rockpaperscissor.jpg" alt="" />
+									<div class="centered" >
+											<h2>Rock, Paper, and Cut to the Chase!</h2>
+									</div>
+								</div>
+								<div class="container">
+									
+									<p>Here is your opportunity to train an <b>image classifier</b> yourself. If the page has loaded correctly you have a generic trained image classifier downloaded to your browser.
+										Now you can train this classifier to any four things you want. I am suggesting you teach it to play Rock, Paper, Scissors and recognize when you aren't playing. 
+									</p>
+									<p>It's not the traditional game, but you hold up your hand in the web cam as Rock, Paper, or Scissors like you would in a game
+										and then click the appropriate train button. You will start to see predictiontion based on what is happening in the webcam. Probabilty is how certain the guess is from 0 to 1. 
+									</p>
+									<h5>
+										RECOMMENDATIONS
+									</h5>
+									<ul>
+										<li>Train a rock, paper, scissors a couple times each BEFORE no action.</li>
+										<li>It takes about 30 trys on each before you get consistent results.</li>
+										<li>Make sure to mix it up. It learns best when they are out of order.</li>
+										<li>Move your hand to different spots in the viewport.</li>
+										<li>Change what's in the background to increase results.</li>
+									</ul>
+									<h5>SIDE NOTE:</h5>
+									<p>This is a tiny neural network. It lives in your browser right now!
+										As soon as you refresh this page it will forget everything you taugh it.
+									</p>
+
+								</div>
+
+
+							</section>
+
+						<!-- Two -->
+
+						<section id="two">
+							<div class="container">
+								<h3>Image Classifier</h3>
+								<div class="features">
+									<article>
+										<!-- <a href="https://warrenrross.github.io/USC_Homework-14_GeoMapping/" class="image"><img src="images/1-Logo.png" alt="" /></a> -->
+										<div id="console"></div>
+										<!-- Add an image that we will use to test -->
+										<video autoplay playsinline muted id="webcam" width="640" height="480" class="image fit"></video>
+										<div >
+											
+												<button id="class-a" class="button alt small">Train Rock</button>
+												<button id="class-b" class="button alt small">Train Paper</button>
+												<button id="class-c" class="button alt small">Train Scissor</button>
+												<button id="class-no_action" class="button alt small">Add No Action</button>
+											
+										</div>
+									</article>
+									
+								</div>
+								<h5>The GitHub repo for this page is located <a class="button alt small" href="https://github.com/warrenrross/JS-Image-Classifier">here</a>.</h5>
+							</div>
+						</section>
+
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Contact Me</h3>
+									<p>I am interested in hearing what you are working on!</p>
+									<ul class="icons">
+											<li><a href="https://www.linkedin.com/in/warrenrross" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+											<li><a href="https://github.com/warrenrross" class="icon brands fa-github"><span class="label">Github</span></a></li>
+											<li><a href="https://medium.com/@warrenrross" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
+											<li><a href="https://twitter.com/warrenrross" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="https://dev.to/warrenrross" class="icon brands fa-dev"><span class="label">DEV Profile</span></a></li>
+											<li><a href="https://www.instagram.com/warrenrross/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										</ul>
+								</div>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
+			<script src="assets/js/index.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>

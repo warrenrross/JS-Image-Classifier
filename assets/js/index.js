@@ -36,7 +36,7 @@ async function app() {
         // Get the most likely class and confidences from the classifier module.
         const result = await classifier.predictClass(activation);
   
-        const classes = ['A', 'B', 'C', "No Action"];
+        const classes = ['ROCK', 'PAPER', 'SCISSORS', "No Action"];
         document.getElementById('console').innerText = `
           prediction: ${classes[result.classIndex]}\n
           probability: ${result.confidences[result.classIndex]}
@@ -65,5 +65,12 @@ async function setupWebcam() {
       }
     });
   }
+
+  const img = document.getElementById('img');  
+  handTrack.load().then(model => { 
+      model.detect(webcamElement).then(predictions => {
+      console.log('Predictions: ', predictions) // bbox predictions
+      });
+  });
 
 app();
