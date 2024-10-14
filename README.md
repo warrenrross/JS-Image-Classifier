@@ -12,7 +12,7 @@ html5up.net | @ajlkn
 AJ
 aj@lkn.io | @ajlkn
 
-He was really helpful with directions on changing things and I hightly recommend working with him.
+He was really helpful with directions on changing things and I highly recommend working with him.
 
 
 Other Credits:
